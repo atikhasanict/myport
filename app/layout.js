@@ -1,4 +1,5 @@
 import './globals.css'
+import { ClientWrapper } from './ClientWrapper'
 
 export const metadata = {
   title: 'Atik - Portfolio',
@@ -7,8 +8,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ClientWrapper>{children}</ClientWrapper>
+      </body>
     </html>
   )
 }
